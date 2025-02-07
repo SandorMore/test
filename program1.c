@@ -2,9 +2,12 @@
 #include <stdbool.h>
 #include <math.h>
 int main(){
+    double nums[] = {1.0,2.2,3.22,4.42,5.76};
 
-    printf("Hello World\n");
-    countSum();
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%.2lf\n", nums[i]);
+    }
     return 0;
 }
 int datatypes(){
@@ -13,7 +16,7 @@ int datatypes(){
     char grande = 'C';
     unsigned char nig = 250;
     char name[] = "Sanyi";
-    long long l = 9999999999999999999;
+    long long l = 9999999999999999;
     printf("Im %s\n", name);
     printf("Im also %d", age);
     printf(" old");
@@ -36,8 +39,11 @@ void countSum(){
          
         printf("\nWhat is your number: ");
         scanf("%d", &input);
-        sum += input;
+        if(input > 0){
+            sum += input;
         
+        }
+       
     } while (input > 0);
     printf("\n Sum is: %d", sum);
 }
