@@ -1,9 +1,10 @@
 #include <stdio.h>
-
+#include <stdbool.h>
+#include <math.h>
 int main(){
 
     printf("Hello World\n");
-    findValueOfAll();
+    countSum();
     return 0;
 }
 int datatypes(){
@@ -21,9 +22,22 @@ int datatypes(){
     printf("Ez egy geci nagy szam  : %lld", l);
 }
 
-int findValueOfAll(){
+void findValueOfAll(){
     float item1 = 55.3;
     float item2 = 12.3234443;
 
-    printf("Item 1's price is : %f.1\n", item1);
+    printf("Item 1's price is : $%.1f", item1);
+}
+void countSum(){
+    int input;
+    int sum = 0;  
+    do
+    {
+         
+        printf("\nWhat is your number: ");
+        scanf("%d", &input);
+        sum += input;
+        
+    } while (input > 0);
+    printf("\n Sum is: %d", sum);
 }
