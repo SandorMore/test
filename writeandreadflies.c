@@ -2,16 +2,22 @@
 
 int main(){
 
-    FILE *pF = fopen("test.txt", "a");
-    fprintf(pF, "shoot him ahh\n");
-    fclose(pF);
-    if(remove("test.txt") == 0){
-        printf("file removed sucessfully");
+    writeFile();
+    return 0;
+}
+void writeFile(){
+    FILE *pF = fopen("test.txt", "r");
+    char buffer[255];
+    if(pF == NULL){
+        printf("Unable to locate file");
     }
     else{
-        printf("No good");
+        while(fgets(buffer, 255, pF) != NULL)
+        {
+            
+            printf("%s", buffer);
+        }
+        fclose(pF);
     }
 
-
-    return 0;
 }
