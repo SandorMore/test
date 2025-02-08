@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-int main(){
-    double nums[] = {1.0,2.2,3.22,4.42,5.76};
+bool IsEven(int num);
 
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%.2lf\n", nums[i]);
-    }
-    return 0;
+int main(){
+
+    Func();
 }
 int datatypes(){
     int age = 17;
@@ -46,4 +43,34 @@ void countSum(){
        
     } while (input > 0);
     printf("\n Sum is: %d", sum);
+}
+bool IsEven(int num)
+{
+    if (num % 2 != 0){
+        
+        printf("Its odd");
+    }
+    else{
+        printf("Its even");
+    }
+    
+}
+void Func(){
+    char input;
+    printf("What to print?");
+
+    scanf("%c", &input);
+
+    switch (input)
+    {
+    case 'X':
+        printf("XXXXX");
+        break;
+    case 'C':
+        printf("CCCCC");
+        break;
+    default:
+        printf("You did not print selec anything or no valid input was given!");
+        break;
+    }
 }
