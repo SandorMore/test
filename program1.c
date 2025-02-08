@@ -5,7 +5,7 @@ bool IsEven(int num);
 
 int main(){
 
-    Func();
+    GoThroughAList();
 }
 int datatypes(){
     int age = 17;
@@ -57,20 +57,28 @@ bool IsEven(int num)
 }
 void Func(){
     char input;
-    printf("What to print?");
+    printf("\nWhat to print?");
 
     scanf("%c", &input);
 
     switch (input)
     {
     case 'X':
-        printf("XXXXX");
+        printf("XXXXX\n");
         break;
     case 'C':
-        printf("CCCCC");
+        printf("CCCCC\n");
         break;
     default:
-        printf("You did not print selec anything or no valid input was given!");
+        printf("\nYou did not print anything or no valid input was given!");
         break;
+    }
+}
+void GoThroughAList(){
+    float prices[] = {10.5, 10.55, 30.5};
+    
+    for (int i = 0; i < sizeof(prices) / sizeof(prices[0]); i++)
+    {
+        printf("$%.2f\n", prices[i]);
     }
 }
