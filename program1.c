@@ -38,7 +38,6 @@ void countSum(){
         scanf("%d", &input);
         if(input > 0){
             sum += input;
-        
         }
        
     } while (input > 0);
