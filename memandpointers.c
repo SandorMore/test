@@ -18,6 +18,7 @@ int main(){
 
     printf("\n");
     r();
+    PrintAge(12);
     return 0;
 }
 void r(){
@@ -28,4 +29,7 @@ void r(){
     printf("%p\n", &age);
 
     printf("The value at the address is : %d\n", *pAge);
+}
+void PrintAge(int *pAge){
+    printf("You are %d years old \n", *pAge);
 }
