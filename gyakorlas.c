@@ -1,20 +1,22 @@
 #include <stdio.h>
 
 
-struct  Person
+struct  User
 {
     char name[64];
     int age;
+    char occupation[64];
+
 };
 
 void main(int argc, char *argv[]){
-    struct Person people[100];
-    struct Person *pPerson = &people;
+    struct User user;
+
+    printf("What is your name?\n");
+    scanf("%c", &user.name);
+    printf("What is your age?\n");
+    scanf("%d", &user.age);
+    printf("What is your occupation?\n");
+    scanf("%c", &user.occupation);
     
-    int i = 0;
-    for(i = 0; i < 100; i++){
-        pPerson -> age = 0;
-        pPerson += 1;
-    }
-    return 0;
 }

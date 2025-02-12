@@ -17,5 +17,3 @@ local function FiboNum(n)
     memo[n] = ans
     return ans
 end
-print(fact(5))
-print(FiboNum(50))
